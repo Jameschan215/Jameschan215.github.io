@@ -1,0 +1,16 @@
+current directory: /Users/chenjian/myblog/Jameschan215.github.io/vendor/cache/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+/Users/chenjian/.rvm/rubies/ruby-2.6.0/bin/ruby -I /Users/chenjian/.rvm/rubies/ruby-2.6.0/lib/ruby/2.6.0 -r ./siteconf20190116-43663-bjthx4.rb extconf.rb
+creating Makefile
+
+current directory: /Users/chenjian/myblog/Jameschan215.github.io/vendor/cache/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" clean
+
+current directory: /Users/chenjian/myblog/Jameschan215.github.io/vendor/cache/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR="
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.bundle
+
+current directory: /Users/chenjian/myblog/Jameschan215.github.io/vendor/cache/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 ruby_http_parser.bundle ./.gem.20190116-43663-1f43nvu
