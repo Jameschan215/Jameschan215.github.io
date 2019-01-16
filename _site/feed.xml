@@ -1,3 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-16T14:46:58+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">James Chen</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Hello World</title><link href="http://localhost:4000/blog/2019/01/16/hello-world-from-james" rel="alternate" type="text/html" title="Hello World" /><published>2019-01-16T14:01:00+08:00</published><updated>2019-01-16T14:01:00+08:00</updated><id>http://localhost:4000/blog/2019/01/16/hello-world-from-james</id><content type="html" xml:base="http://localhost:4000/blog/2019/01/16/hello-world-from-james">&lt;h2 id=&quot;你好世界&quot;&gt;你好，世界！&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-16T20:05:43+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">James Chen</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Hello World</title><link href="http://localhost:4000/blog/2019/01/16/hello-world-from-james" rel="alternate" type="text/html" title="Hello World" /><published>2019-01-16T14:01:00+08:00</published><updated>2019-01-16T14:01:00+08:00</updated><id>http://localhost:4000/blog/2019/01/16/hello-world-from-james</id><content type="html" xml:base="http://localhost:4000/blog/2019/01/16/hello-world-from-james">&lt;h2 id=&quot;你好世界&quot;&gt;你好，世界！&lt;/h2&gt;
 &lt;p&gt;Hey！大家好，这是我的第一篇BLOG。&lt;br /&gt;
-开通这个BLOG主要是为了在学习过程中记录一些知识点，方便记忆，并希望以此激励自己坚持下去，加油！&lt;/p&gt;</content><author><name>james</name></author><category term="blog" /><category term="something else" /><summary type="html">你好，世界！ Hey！大家好，这是我的第一篇BLOG。 开通这个BLOG主要是为了在学习过程中记录一些知识点，方便记忆，并希望以此激励自己坚持下去，加油！</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry></feed>
+开通这个BLOG主要是为了在学习过程中记录一些知识点，方便记忆，并希望以此激励自己坚持下去，加油！&lt;/p&gt;</content><author><name>james</name></author><category term="blog" /><category term="something else" /><summary type="html">你好，世界！ Hey！大家好，这是我的第一篇BLOG。 开通这个BLOG主要是为了在学习过程中记录一些知识点，方便记忆，并希望以此激励自己坚持下去，加油！</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">基础内容</title><link href="http://localhost:4000/blog/2019/01/16/swfit-basic" rel="alternate" type="text/html" title="基础内容" /><published>2019-01-16T14:01:00+08:00</published><updated>2019-01-16T14:01:00+08:00</updated><id>http://localhost:4000/blog/2019/01/16/swfit-basic</id><content type="html" xml:base="http://localhost:4000/blog/2019/01/16/swfit-basic">&lt;h2 id=&quot;基础内容&quot;&gt;基础内容&lt;/h2&gt;
+&lt;h3 id=&quot;输出常量和变量&quot;&gt;输出常量和变量&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;print(_:separator:terminator:)&lt;/code&gt;默认在行末添加换行符结束输出，若不想换行，就传入空的换行符作为结束，例：&lt;code class=&quot;highlighter-rouge&quot;&gt;print(someValue, terminator: &quot;&quot;)&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;数值型字面量&quot;&gt;数值型字面量&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;一个十进制数，没有前缀&lt;/li&gt;
+  &lt;li&gt;一个二进制数，前缀是 0b&lt;/li&gt;
+  &lt;li&gt;一个八进制数，前缀是 0o&lt;/li&gt;
+  &lt;li&gt;一个十六进制数，前缀是 0x&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;十进制娄与 exp 的指数，结果就等于基数乘以10&lt;sup&gt;exp&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1.25e2 意味着 1.25 x 102, 或者 125.0&lt;/li&gt;
+  &lt;li&gt;1.25e-2  意味着 1.25 x 10-2, 或者 0.0125&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;整数和浮点数都可以添加额外的零或者添加下划线来增加代码的可读性。下面的这些格式都不会影响字面量的值：&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;let paddedDouble = 000123.456&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;let oneMillion = 1_000_000&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;let justOverOneMillion = 1_000_000.000_000_1&lt;/code&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;整数和浮点数转换&quot;&gt;整数和浮点数转换&lt;/h3&gt;
+&lt;p&gt;在用浮点数初始化一个新的整数类型的时候，数值会被截断。也就是说 &lt;code class=&quot;highlighter-rouge&quot;&gt;4.75&lt;/code&gt; 会变成 &lt;code class=&quot;highlighter-rouge&quot;&gt;4&lt;/code&gt;， &lt;code class=&quot;highlighter-rouge&quot;&gt;-3.9&lt;/code&gt; 会变为 &lt;code class=&quot;highlighter-rouge&quot;&gt;-3&lt;/code&gt; 。&lt;/p&gt;
+
+&lt;h3 id=&quot;类型别名&quot;&gt;类型别名&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;类型别名&lt;/strong&gt;可以为已经存在的类型定义了一个新的可选名字。用 typealias 关键字定义类型别名。&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;typealias AudioSample = UInt16&lt;/code&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;var maxAmplitudeFound = AudioSample.min&lt;/code&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;</content><author><name>james</name></author><category term="blog" /><category term="swift" /><summary type="html">基础内容 输出常量和变量 print(_:separator:terminator:)默认在行末添加换行符结束输出，若不想换行，就传入空的换行符作为结束，例：print(someValue, terminator: &quot;&quot;)。 数值型字面量 一个十进制数，没有前缀 一个二进制数，前缀是 0b 一个八进制数，前缀是 0o 一个十六进制数，前缀是 0x 十进制娄与 exp 的指数，结果就等于基数乘以10exp: 1.25e2 意味着 1.25 x 102, 或者 125.0 1.25e-2 意味着 1.25 x 10-2, 或者 0.0125</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/swift_logo.png" /></entry></feed>
