@@ -1,4 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-17T10:03:52+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">James Chen</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Hello World</title><link href="http://localhost:4000/blog/2019/01/16/hello-world-from-james" rel="alternate" type="text/html" title="Hello World" /><published>2019-01-16T14:01:00+08:00</published><updated>2019-01-16T14:01:00+08:00</updated><id>http://localhost:4000/blog/2019/01/16/hello-world-from-james</id><content type="html" xml:base="http://localhost:4000/blog/2019/01/16/hello-world-from-james">&lt;h2 id=&quot;你好世界&quot;&gt;你好，世界！&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-17T16:41:26+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">James Chen</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">集合类型</title><link href="http://localhost:4000/blog/2019/01/17/swfit-collection-types" rel="alternate" type="text/html" title="集合类型" /><published>2019-01-17T10:25:00+08:00</published><updated>2019-01-17T10:25:00+08:00</updated><id>http://localhost:4000/blog/2019/01/17/swfit-collection-types</id><content type="html" xml:base="http://localhost:4000/blog/2019/01/17/swfit-collection-types">&lt;h2 id=&quot;集合类型&quot;&gt;集合类型&lt;/h2&gt;
+&lt;h3 id=&quot;集合的可变性&quot;&gt;集合的可变性&lt;/h3&gt;
+&lt;p&gt;如果你把数组、合集或者字典赋值给一个常量，则集合就成了不可变的，它的&lt;strong&gt;大小和内容&lt;/strong&gt;都不能被改变。&lt;/p&gt;
+
+&lt;h3 id=&quot;数组&quot;&gt;数组&lt;/h3&gt;
+
+&lt;p&gt;数组可以相加（+）：&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;anotherThreeDoubles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;repeating&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// anotherThreeDoubles is of type [Double], and equals [2.5, 2.5, 2.5]&lt;/span&gt;
+ 
+&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;sixDoubles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threeDoubles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;anotherThreeDoubles&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// sixDoubles is inferred as [Double], and equals [0.0, 0.0, 0.0, 2.5, 2.5, 2.5]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;另外，可以使用加赋值运算符 ( +=)来在数组末尾添加一个或者多个同类型元素：&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shoppingList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Baking Powder&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// shoppingList now contains 4 items&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shoppingList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Chocolate Spread&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Cheese&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Butter&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// shoppingList now contains 7 items&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;你同样可以使用下标脚本语法来一次改变一个范围的值，就算替换与范围长度不同的值的合集也行。下面的栗子替换用 “Bananas”和 “Apples”替换 “Chocolate Spread”, “Cheese”, and “Butter”：&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shoppingList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Bananas&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Apples&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// shoppingList now contains 6 items&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;★ 请研究一下swift标准库里Array的具体属性和方法，点击&lt;em&gt;&lt;a href=&quot;https://developer.apple.com/documentation/swift/array&quot;&gt;这里&lt;/a&gt;&lt;/em&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;集合&quot;&gt;集合&lt;/h3&gt;
+&lt;p&gt;合集（set）是无序的，值不重复的。&lt;/p&gt;
+
+&lt;h4 id=&quot;set类型的哈希值&quot;&gt;Set类型的哈希值&lt;/h4&gt;
+&lt;p&gt;合集中的类型必须是可哈希的。&lt;/p&gt;
+
+&lt;p&gt;所有 Swift 的基础类型（比如 &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Int&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Double&lt;/code&gt;, 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;Bool&lt;/code&gt;）默认都是可哈希的，并且可以用于合集或者字典的键。没有关联值的枚举成员值（如同枚举当中描述的那样）同样默认可哈希。&lt;/p&gt;
+
+&lt;p&gt;★ 自定义类型作为合集的值类型或者字典的键类型时，必须让它们遵循&lt;code class=&quot;highlighter-rouge&quot;&gt;Hashable&lt;/code&gt;协议。遵循 Hashable协议的类型必须提供可获取的叫做 hashValue的 Int属性。因为 Hashable协议遵循 Equatable，遵循的类型必须同时一个“等于”运算符 ( ==)的实现。&lt;/p&gt;
+
+&lt;h4 id=&quot;使用数组字面量创建合集&quot;&gt;使用数组字面量创建合集&lt;/h4&gt;
+&lt;p&gt;合集类型不能从数组字面量推断出来，所以 &lt;code class=&quot;highlighter-rouge&quot;&gt;Set&lt;/code&gt;类型必须被显式地声明。但是可以推断集合值的类型，下例可以把&lt;code class=&quot;highlighter-rouge&quot;&gt;Set&amp;lt;String&amp;gt;&lt;/code&gt;中尖括号部分的内容去掉：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;var favoriteGenres: Set = [&quot;Rock&quot;, &quot;Classical&quot;, &quot;Hip hop&quot;]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;可以通过调用合集的 &lt;code class=&quot;highlighter-rouge&quot;&gt;remove(_:)&lt;/code&gt;方法来从合集当中移除一个元素，如果元素是合集的成员就移除它，并且返回移除的值，如果合集没有这个成员就返回 nil。另外，合集当中所有的元素可以用 removeAll()一次移除。&lt;/p&gt;
+
+&lt;p&gt;要检查合集是否包含了特定的元素，使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;contains(_:)&lt;/code&gt;方法。&lt;/p&gt;
+
+&lt;h4 id=&quot;合集成员关系和相等性&quot;&gt;合集成员关系和相等性&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;使用“相等”运算符 ( == )来判断两个合集是否包含有相同的值；&lt;/li&gt;
+  &lt;li&gt;使用 isSubset(of:) 方法来确定一个合集的所有值是被某合集包含；&lt;/li&gt;
+  &lt;li&gt;使用 isSuperset(of:)方法来确定一个合集是否包含某个合集的所有值；&lt;/li&gt;
+  &lt;li&gt;使用 isStrictSubset(of:) 或者 isStrictSuperset(of:)方法来确定是个合集是否为某一个合集的子集或者超集，但并不相等；&lt;/li&gt;
+  &lt;li&gt;使用 isDisjoint(with:)方法来判断两个合集是否拥有完全不同的值。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;字典&quot;&gt;字典&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;可以用下标脚本给字典添加新元素。 &lt;code class=&quot;highlighter-rouge&quot;&gt;airports[&quot;LHR&quot;] = &quot;London&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;使用字典的 &lt;code class=&quot;highlighter-rouge&quot;&gt;updateValue(_:forKey:)&lt;/code&gt;方法来设置或者更新键的值，并返回旧值，并且该返回值是可选的。&lt;/li&gt;
+  &lt;li&gt;下标脚本语法来从字典的特点键中取回的值也是可选的，因为存在键没有值的情况。&lt;/li&gt;
+  &lt;li&gt;使用下标脚本语法给一个键赋值 nil，来从字典当中移除一个键值对，即&lt;code class=&quot;highlighter-rouge&quot;&gt;key&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;value&lt;/code&gt;全被删除了。&lt;/li&gt;
+  &lt;li&gt;使用 removeValue(forKey:)来从字典里移除键值对。如果存在键、值，移除并且返回移除的值，如果值不存在则返回 nil：&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;removedValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airports&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;removeValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;forKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;DUB&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The removed airport's name is &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;removedValue&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The airports dictionary does not contain a value for DUB.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Prints &quot;The removed airport's name is Dublin Airport.&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;遍历字典&quot;&gt;遍历字典&lt;/h4&gt;
+&lt;p&gt;用 for-in循环来遍历字典的键值对，也可以通过访问字典的 keys和 values属性来取回可遍历的字典的键或值的集合：&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;airportCode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airportName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airports&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;airportCode&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;airportName&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// YYZ: Toronto Pearson&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// LHR: London Heathrow&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airportCode&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airports&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keys&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Airport code: &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;airportCode&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Airport code: YYZ&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Airport code: LHR&lt;/span&gt;
+ 
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airportName&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;airports&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Airport name: &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;airportName&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Airport name: Toronto Pearson&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Airport name: London Heathrow&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>james</name></author><category term="blog" /><category term="swift" /><summary type="html">集合类型 集合的可变性 如果你把数组、合集或者字典赋值给一个常量，则集合就成了不可变的，它的大小和内容都不能被改变。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/swift_logo.png" /></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/blog/2019/01/16/hello-world-from-james" rel="alternate" type="text/html" title="Hello World" /><published>2019-01-16T14:01:00+08:00</published><updated>2019-01-16T14:01:00+08:00</updated><id>http://localhost:4000/blog/2019/01/16/hello-world-from-james</id><content type="html" xml:base="http://localhost:4000/blog/2019/01/16/hello-world-from-james">&lt;h2 id=&quot;你好世界&quot;&gt;你好，世界！&lt;/h2&gt;
 &lt;p&gt;Hey！大家好，这是我的第一篇BLOG。&lt;br /&gt;
 开通这个BLOG主要是为了在学习过程中记录一些知识点，方便记忆，并希望以此激励自己坚持下去，加油！&lt;/p&gt;</content><author><name>james</name></author><category term="blog" /><category term="something else" /><summary type="html">你好，世界！ Hey！大家好，这是我的第一篇BLOG。 开通这个BLOG主要是为了在学习过程中记录一些知识点，方便记忆，并希望以此激励自己坚持下去，加油！</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">基础内容</title><link href="http://localhost:4000/blog/2019/01/16/swfit-basic" rel="alternate" type="text/html" title="基础内容" /><published>2019-01-16T14:01:00+08:00</published><updated>2019-01-16T14:01:00+08:00</updated><id>http://localhost:4000/blog/2019/01/16/swfit-basic</id><content type="html" xml:base="http://localhost:4000/blog/2019/01/16/swfit-basic">&lt;h2 id=&quot;基础内容&quot;&gt;基础内容&lt;/h2&gt;
 &lt;h3 id=&quot;输出常量和变量&quot;&gt;输出常量和变量&lt;/h3&gt;
