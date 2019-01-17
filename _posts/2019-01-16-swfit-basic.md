@@ -6,7 +6,7 @@ image: /assets/images/swift_logo.png
 headerImage: true
 tag:
 - swift
-star: true
+star: false
 category: blog
 author: james
 description: learning swift

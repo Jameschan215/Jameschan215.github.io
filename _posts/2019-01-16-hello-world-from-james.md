@@ -6,7 +6,6 @@ image: /assets/images/markdown.jpg
 headerImage: false
 tag:
 - something else
-star: true
 category: blog
 author: james
 description: my first blog
