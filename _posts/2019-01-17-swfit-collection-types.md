@@ -89,6 +89,15 @@ if let removedValue = airports.removeValue(forKey: "DUB") {
 }
 // Prints "The removed airport's name is Dublin Airport."
 ```
+★ 下标脚本语法来从字典的特点键中取值时，存在特点键不存在的情况，此里可以为不存在的键设置一个默认值，以便下标方法总能取回一个值(如果键有值，取回该值，如果键无值，取默认值)：
+
+```swift
+let dict = ["a": 1, "b": 2, "c": 3]
+print(dict["d", default: 0])
+// prints "0"
+print(dict["b"])
+// prints "2"
+```
 
 #### 遍历字典
 用 for-in循环来遍历字典的键值对，也可以通过访问字典的 keys和 values属性来取回可遍历的字典的键或值的集合：
