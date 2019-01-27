@@ -25,7 +25,7 @@ Central to key-value coding (or KVC) is the general notion of properties. A prop
 
 KVC locates an object’s property through a key, which is a string identifier. A key usually corresponds to the name of an accessor method or instance variable defined by the object. The key must conform to certain conventions: It must be ASCII encoded, begin with a lowercase letter, and have no whitespace. A key path is a string of dot-separated keys that is used to specify a sequence of object properties to traverse. The property of the first key in the sequence is relative to a specific object (employee1 in the following diagram), and each subsequent key is evaluated relative to the value of the previous property.  
 
-**KVC通过键定位对象的属性，该键是字符串标识符。 Key通常对应于由对象定义的访问器方法或实例变量的名称。Key必须符合某些约定：它必须是ASCII编码的，以小写字母开头，并且没有空格。Key path是一串点分隔的key，用于指定要穿过的对象属性序列。 序列中第一个key的属性是相对于特定对象（下图中的employee1），并且每个后续key相对于前一个属性的值进行计算。**
+**KVC通过键定位对象的属性，该键是字符串标识符。 Key通常对应于由对象定义的访问器方法或实例变量的名称。Key必须符合某些约定：它必须是`ASCII`编码的，以小写字母开头，并且没有空格。`Key path`是一串点分隔的key，用于指定要穿过的对象属性序列。 序列中第一个key的属性是相对于特定对象（下图中的`employee1`），并且每个后续key相对于前一个属性的值进行计算。**
 
  ![image1](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/Art/key_value_coding_2x.png) 
   
@@ -37,9 +37,10 @@ The NSKeyValueCoding informal protocol makes KVC possible. Two of its methods—
 
 How you make a property KVC compliant depends on whether that property is an attribute, a to-one relationship, or a to-many relationship. For attributes and to-one relationships, a class must implement at least one of the following in the given order of preference (key refers to the property key):
 
-The class has a declared property with the name key.
-It implements accessor methods named key and, if the property is mutable, setKey:. (If the property is a Boolean attribute, the getter accessor method has the form isKey.)
-It declares an instance variable of the form key or _key.
+1. The class has a declared property with the name key.
+2. It implements accessor methods named key and, if the property is mutable, setKey:. (If the property is a Boolean attribute, the getter accessor method has the form isKey.)
+3. It declares an instance variable of the form key or _key.
+
 Implementing KVC compliance for a to-many relationship is a more complicated procedure. Refer to the document that definitively describes key-value coding to learn what this procedure is.  
 
 **如何使属性与KVC兼容，取决于它是一个属性、`to-one`关系，还是`to-many`关系。 对于属性和`to-one`关系，类必须按给定的优先顺序实现以下至少一项（键指的是属性键）：**

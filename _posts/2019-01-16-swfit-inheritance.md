@@ -1,5 +1,5 @@
 ---
-title: "inheritance"
+title: "继承 Inheritance"
 layout: post
 date: 2019-01-18 19:10
 image: /assets/images/swift_logo.png
